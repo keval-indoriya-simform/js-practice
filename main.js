@@ -314,3 +314,116 @@ console.log(testText.endsWith("text"));
 
 s1 = `Hello, ${person.fullName()}`;
 console.log(s1);
+
+
+
+
+
+// NaN is a JavaScript reserved word indicating that a number is not a legal number.
+// Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number)
+// NaN is a number: typeof NaN returns number
+s1 = 10 / "hiii";
+console.log(s1);
+console.log(isNaN(s1));
+
+
+
+
+
+// Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+// Infinity is a number: typeof Infinity returns number.
+var myNumber = 2;
+// Execute until Infinity
+while (myNumber != Infinity) {
+  myNumber = myNumber * myNumber;
+  console.log(myNumber);
+}
+
+// Division by 0 (zero) also generates Infinity:
+console.log(myNumber / 0);
+
+// JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x
+myNumber = 0xff;
+console.log(myNumber);
+
+console.log("base 32 " + myNumber.toString(32));
+console.log("base 16 " + myNumber.toString(16));
+console.log("base 12 " + myNumber.toString(12));
+console.log("base 10 " + myNumber.toString(10));
+console.log("base 8  " + myNumber.toString(8));
+console.log("base 2  " + myNumber.toString(2));
+
+
+
+
+
+//BigInt
+// To create a BigInt, append n to the end of an integer or call BigInt()
+var bigint1 = 1234567890123456789012345n;
+var bigint2 = BigInt(1234567890123456789012345)
+
+console.log(bigint1);
+console.log(bigint2);
+console.log(bigint1 * bigint2);
+
+bigint1 = 5n;
+console.log(Number(bigint1) / 2);
+
+console.log(Number.MAX_SAFE_INTEGER)
+console.log(Number.MIN_SAFE_INTEGER)
+
+console.log(Number.isInteger(100))
+
+
+
+
+
+//Number Methods
+// toString()	    Returns a number as a string
+// toExponential()	Returns a number written in exponential notation
+// toFixed()	    Returns a number written with a number of decimals
+// toPrecision()	Returns a number written with a specified length
+// ValueOf()	    Returns a number as a number
+// All JavaScript data types have a valueOf() and a toString() method.
+
+var int1 = 7.123;
+console.log("To String      " + int1.toString());
+console.log("To Exponential " + int1.toExponential(6));
+console.log("To Fixed       " + int1.toFixed(4));
+console.log("To Precision   " + int1.toPrecision(6));
+console.log("Value of       " + int1.valueOf());
+
+// The Number() method can be used to convert JavaScript variables to numbers:
+console.log(Number(false));
+console.log(Number(true));
+console.log(Number("7123"));
+console.log(Number("  7123"));
+console.log(Number("7123  "));
+console.log(Number(" 7123  "));
+console.log(Number("7 1 23"));
+console.log(Number("7.123"));
+console.log(Number("71,33"));
+console.log(Number("Keval"));
+
+// parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+// If the number cannot be converted, NaN (Not a Number) is returned.
+// The number methods above belong to the JavaScript Number Object.
+// Using X.isInteger() where X is a variable, will result in an error
+
+console.log(parseInt("-10"));
+console.log(parseInt("-10.33"));
+console.log(parseInt("10"));
+console.log(parseInt("10.33"));
+console.log(parseInt("10 20 30"));
+console.log(parseInt("10 years"));
+console.log(parseInt("years 10"));
+
+//Number property
+// EPSILON	The difference between 1 and the smallest number > 1.
+// MAX_VALUE	The largest number possible in JavaScript
+// MIN_VALUE	The smallest number possible in JavaScript
+// MAX_SAFE_INTEGER	The maximum safe integer (253 - 1)
+// MIN_SAFE_INTEGER	The minimum safe integer -(253 - 1)
+// POSITIVE_INFINITY	Infinity (returned on overflow)
+// NEGATIVE_INFINITY	Negative infinity (returned on overflow)
+// NaN	A "Not-a-Number" value
